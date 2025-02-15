@@ -1,0 +1,86 @@
+/* Show cursor on Page 5 */
+body.page5 {
+    cursor: auto;
+}
+
+/* Background image for Page 5 (candlesblown.jpg) */
+.background-candles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('candlesblown.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -2;  /* Place the background behind all other content */
+}
+
+/* Confetti container */
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Confetti pieces */
+.confetti {
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    background-color: gold;
+    opacity: 0;
+    transform: rotate(45deg);
+    animation: fall 6s ease-out forwards, drift 6s ease-in-out infinite;
+}
+
+/* Falling animation */
+@keyframes fall {
+    0% {
+        top: -10%;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+
+/* Horizontal drift animation */
+@keyframes drift {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateX(50px) rotate(180deg);
+    }
+    100% {
+        transform: translateX(-50px) rotate(360deg);
+    }
+}
+
+/* Button styles for Page 5 (lastheart.png) */
+.small-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100px; /* Slightly bigger button */
+    height: 100px;
+    background: url('lastheart.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Button hover effect for Page 5 */
+.small-button:hover {
+    transform: scale(1.15); /* Slight increase on hover */
+}

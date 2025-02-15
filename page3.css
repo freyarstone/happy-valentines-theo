@@ -1,0 +1,54 @@
+.page3-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: url('heartbutton.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    z-index: 9999; /* Ensure button stays on top */
+    transition: transform 0.3s ease;
+}
+
+.page3-button:hover {
+    transform: scale(1.2); /* Enlarge button on hover */
+}
+
+/* Adjusted Page 3 Background Styling */
+.page3 {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Image layers for transition effect */
+#background-layer-1, #background-layer-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+}
+
+#background-layer-1.active, #background-layer-2.active {
+    opacity: 1;
+}
+
+body.page3 {
+    cursor: pointer;
+}
+
+/* Optional: Remove focus outline for button */
+.page3-button:focus {
+    outline: none;
+}

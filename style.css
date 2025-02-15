@@ -1,0 +1,118 @@
+/* General full-page background settings */
+body.page1 {
+    cursor: auto; /* Ensure the cursor is visible */
+}
+
+/* Background for Page 1 (envelope image) */
+.background-envelope {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('envelope.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -2;
+}
+
+/* Kiss image styling */
+.kiss {
+    position: absolute;
+    width: 150px;  /* Adjusted size */
+    height: 150px;  
+    transition: transform 4s ease-out, opacity 4s ease-out;  /* Smooth fall and fade-out */
+    z-index: 5;
+    pointer-events: none;  /* Ensure kisses don't interfere with clicks */
+}
+
+/* Button styles for Page 1 */
+.page1-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;  /* Adjusted button size */
+    height: 100px;
+    background: url('heartbutton.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;  /* Ensure button stays above other elements */
+}
+
+.page1-button:hover {
+    transform: scale(1.15);  /* Enlarge button on hover */
+}
+
+
+/* Background for Page 2 (earth gif) */
+.background-earth {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('earth.gif') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -2;
+}
+
+/* Button styles for Page 2 (heartbutton.png) */
+.page2-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100px; /* Slightly bigger button */
+    height: 100px;
+    background: url('heartbutton.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.page2-button:hover {
+    transform: scale(1.2); /* Hover effect for enlargement */
+}
+
+
+/* Styles for Page 4 ONLY (Cake page) */
+body.page4 {
+    cursor: none;  /* Hide default cursor */
+}
+
+/* Fullscreen cake GIF background for Page 4 */
+body.page4 .background-cake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('cakesequence.gif') no-repeat center center;
+    background-size: cover;
+    z-index: -2;  /* Behind the overlay and spotlight */
+}
+
+/* Black overlay for Page 4 */
+body.page4 .black-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);  /* Semi-transparent black */
+    z-index: 1;  /* Above the background but below the spotlight */
+    pointer-events: none;  /* Don't block clicks or interactions */
+}
+
+/* Spotlight effect for Page 4 */
+body.page4 .spotlight {
+    position: absolute;
+    width: 150px;  /* Size of the spotlight */
+    height: 150px;
+    border-radius: 50%;  /* Circular spotlight */
+    box-shadow: 0 0 150px 150px rgba(0, 0, 0, 0.9);  /* Dark area outside the spotlight */
+    pointer-events: none;  /* Ensure it doesn't interfere with mouse events */
+    z-index: 2;  /* Ensure it's above the overlay */
+    background-color: transparent;  /* Spotlight area should be clear */
+}
